@@ -1,13 +1,13 @@
-# Sudoku Solver
+# Sudoku Solver en Go
 
-Un résolveur de Sudoku simple basé sur un algorithme de **backtracking**. Ce projet permet de résoudre des grilles de Sudoku en utilisant la méthode de recherche exhaustive. Le programme peut résoudre des grilles de Sudoku valides et renvoie la solution si elle existe.
+Ce projet implémente un résolveur de Sudoku en utilisant le langage Go (Golang). Il prend une grille de Sudoku valide en entrée, vérifie sa validité, puis utilise un algorithme de **backtracking** pour résoudre la grille. Si la grille est valide et résoluble, la solution est affichée ; sinon, un message d'erreur est renvoyé.
 
 ## Fonctionnalités
 
-- Résolution automatique de grilles de Sudoku de 9x9.
-- Validation des règles du Sudoku : chaque ligne, chaque colonne et chaque sous-grille 3x3 doivent contenir les chiffres de 1 à 9 sans répétition.
-- Interface simple en ligne de commande pour une utilisation facile.
-- Prise en charge de grilles de Sudoku partiellement remplies.
+- Vérification de la validité de la grille de Sudoku.
+- Résolution de la grille avec un algorithme de **backtracking**.
+- Affichage de la solution si la grille est résolue.
+- Gestion des erreurs pour des entrées invalides.
 
 ## Table des matières
 
@@ -22,16 +22,54 @@ Un résolveur de Sudoku simple basé sur un algorithme de **backtracking**. Ce p
 
 ## Aperçu
 
-Le Sudoku est un puzzle où l'objectif est de remplir une grille de 9x9 avec des chiffres de 1 à 9. Chaque ligne, chaque colonne, et chaque sous-grille 3x3 doivent contenir tous les chiffres de 1 à 9 sans répétition. Le résolveur de ce projet utilise un algorithme de **backtracking** qui explore toutes les combinaisons possibles pour trouver la solution valide.
+Le Sudoku est un puzzle logique où l'on doit remplir une grille de 9x9 cases avec les chiffres de 1 à 9. Chaque ligne, chaque colonne et chaque sous-grille 3x3 doivent contenir tous les chiffres de 1 à 9 sans répétition.
+
+Le résolveur de ce projet prend une grille de Sudoku sous forme de neuf chaînes de neuf caractères. Le programme valide l'entrée, résout le Sudoku si la grille est valide et affiche la solution, ou affiche un message d'erreur si quelque chose ne va pas.
+
+### Exemple de grille d'entrée
+
+Une grille de Sudoku doit être entrée sous forme de neuf chaînes de neuf caractères, comme suit :
+
+Le programme valide la grille, vérifie si elle respecte les règles du Sudoku, puis résout le puzzle.
 
 ## Prérequis
 
-Avant d'exécuter le programme, vous devez vous assurer que vous avez les éléments suivants installés sur votre machine :
+Pour exécuter ce programme, vous devez avoir installé Go (version 1.18 ou supérieure) sur votre machine.
 
-- **Python 3.x** ou une version supérieure.
-- Bibliothèque `numpy` pour la gestion des matrices (facultatif, selon votre implémentation).
+- **Go (Golang)** : Vous pouvez télécharger Go depuis le site officiel [https://golang.org/dl/](https://golang.org/dl/).
 
-Vous pouvez installer les dépendances nécessaires avec `pip` :
+## Installation
+
+1. Clonez ce repository sur votre machine :
+    ```bash
+    git clone https://github.com/votre-utilisateur/sudoku-solver.git
+    ```
+
+2. Accédez au dossier du projet :
+    ```bash
+    cd sudoku-solver
+    ```
+
+3. Compilez et exécutez le programme :
+    ```bash
+    go run main.go "534678912" "672195348" "198342567" "859761423" "426853791" "713924856" "961537284" "287419635" "345286179"
+    ```
+
+   Ou compilez-le pour une exécution plus rapide :
+    ```bash
+    go build -o sudoku-solver main.go
+    ./sudoku-solver "534678912" "672195348" "198342567" "859761423" "426853791" "713924856" "961537284" "287419635" "345286179"
+    ```
+
+## Utilisation
+
+### Entrée du programme
+
+Le programme attend en entrée une grille de Sudoku sous la forme de 9 chaînes de caractères. Chaque chaîne doit contenir exactement 9 chiffres représentant une ligne du Sudoku. Par exemple, pour la grille :
+
+Vous pouvez l'exécuter en ligne de commande comme ceci :
 
 ```bash
-pip install numpy
+go run main.go "534678912" "672195348" "198342567" "859761423" "426853791" "713924856" "961537284" "287419635" "345286179"
+
+
