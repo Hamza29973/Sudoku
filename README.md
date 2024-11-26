@@ -7,17 +7,17 @@ Prérequis
 
 Go 1.18 ou supérieur.
 Une compréhension basique des règles du Sudoku.
-Structure du projet
-bash
-Copier le code
-sudoku
+ <h4>
+Structure du projet</h4>
 
+sudoku
 
 ├── sudoku.go       
 ├── main.go         
 ├── README.md   
      
-Règles du Sudoku
+<h4>Règles du Sudoku
+</h4> 
 
 Une grille de Sudoku est une matrice 9x9, divisée en 9 sous-grilles de 3x3.
 Chaque ligne, chaque colonne et chaque sous-grille 3x3 doivent contenir les chiffres de 1 à 9 sans répétition.
