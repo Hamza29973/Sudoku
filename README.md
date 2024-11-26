@@ -7,10 +7,12 @@ Une compréhension basique des règles du Sudoku.
 Structure du projet
 bash
 Copier le code
-sudoku/
-├── sudoku.go        # Contient les structures et les fonctions pour résoudre le Sudoku
-├── main.go          # Exemple d'utilisation du solveur Sudoku
-├── README.md        # Documentation du projet
+sudoku
+
+
+├── sudoku.go       
+├── main.go         
+├── README.md        
 Règles du Sudoku
 Une grille de Sudoku est une matrice 9x9, divisée en 9 sous-grilles de 3x3.
 Chaque ligne, chaque colonne et chaque sous-grille 3x3 doivent contenir les chiffres de 1 à 9 sans répétition.
