@@ -1,28 +1,37 @@
-<h1>Sudoku en Go</h1>
+# Sudoku Solver
 
+Un résolveur de Sudoku simple basé sur un algorithme de **backtracking**. Ce projet permet de résoudre des grilles de Sudoku en utilisant la méthode de recherche exhaustive. Le programme peut résoudre des grilles de Sudoku valides et renvoie la solution si elle existe.
 
-Ce projet implémente un solveur de Sudoku en Go. Il permet de résoudre une grille de Sudoku donnée en utilisant un algorithme de recherche récursive et de backtracking. Le but est de remplir les cases vides d'une grille de Sudoku avec des chiffres de 1 à 9, en respectant les règles du jeu.
+## Fonctionnalités
 
-Prérequis
+- Résolution automatique de grilles de Sudoku de 9x9.
+- Validation des règles du Sudoku : chaque ligne, chaque colonne et chaque sous-grille 3x3 doivent contenir les chiffres de 1 à 9 sans répétition.
+- Interface simple en ligne de commande pour une utilisation facile.
+- Prise en charge de grilles de Sudoku partiellement remplies.
 
-Go 1.18 ou supérieur.
-Une compréhension basique des règles du Sudoku.
- <h4>
-Structure du projet</h4>
+## Table des matières
 
-sudoku
+1. [Aperçu](#aperçu)
+2. [Prérequis](#prérequis)
+3. [Installation](#installation)
+4. [Utilisation](#utilisation)
+5. [Exemples](#exemples)
+6. [Structure du projet](#structure-du-projet)
+7. [Contribuer](#contribuer)
+8. [Licence](#licence)
 
-├── sudoku.go       
-├── main.go         
-├── README.md   
-     
-<h4>Règles du Sudoku
-</h4> 
+## Aperçu
 
-Une grille de Sudoku est une matrice 9x9, divisée en 9 sous-grilles de 3x3.
-Chaque ligne, chaque colonne et chaque sous-grille 3x3 doivent contenir les chiffres de 1 à 9 sans répétition.
-Les cases initiales sont remplies avec des chiffres entre 1 et 9, et les autres cases doivent être remplies par le solveur.
-Fonctionnalités
-Résolution du Sudoku : Le solveur tente de remplir la grille en respectant les règles du Sudoku.
-Validation de la grille : Avant de résoudre, le programme peut vérifier si une grille est valide.
-Affichage de la grille : La grille peut être affichée dans un format lisible.
+Le Sudoku est un puzzle où l'objectif est de remplir une grille de 9x9 avec des chiffres de 1 à 9. Chaque ligne, chaque colonne, et chaque sous-grille 3x3 doivent contenir tous les chiffres de 1 à 9 sans répétition. Le résolveur de ce projet utilise un algorithme de **backtracking** qui explore toutes les combinaisons possibles pour trouver la solution valide.
+
+## Prérequis
+
+Avant d'exécuter le programme, vous devez vous assurer que vous avez les éléments suivants installés sur votre machine :
+
+- **Python 3.x** ou une version supérieure.
+- Bibliothèque `numpy` pour la gestion des matrices (facultatif, selon votre implémentation).
+
+Vous pouvez installer les dépendances nécessaires avec `pip` :
+
+```bash
+pip install numpy
